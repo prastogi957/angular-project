@@ -37,4 +37,29 @@
   </nav>
  
 <app-health> </app-health>
+<br>
+
 </div>
+
+<div class="example-button-container">
+  <button mat-fab color="warn" (click)="refresher()" aria-label="Example icon button with a home icon">
+    <mat-icon>home</mat-icon>
+  </button>
+</div>
+
+<mat-grid-list cols="2" rowHeight="2:1">
+ 
+  <mat-grid-tile >
+    <app-parkinson [person]="person" [parkinson]="parkinson"></app-parkinson>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-diabetes  [person]="person" [diabetes]="diabetes"></app-diabetes>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-heart  [person]="person" [heart]="heart"> </app-heart>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-covid [person]="person" [covid]="covid" ></app-covid>
+  </mat-grid-tile>
+</mat-grid-list>
+<app-onedis></app-onedis>
